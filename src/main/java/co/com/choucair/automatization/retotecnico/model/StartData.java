@@ -3,6 +3,7 @@ package co.com.choucair.automatization.retotecnico.model;
 public class StartData {
     private String strNameUser;
     private String strPassword;
+    private String strTextStartSharp;
     private String strNameNewBusinessUnit;
     private String strParentUnit;
 
@@ -21,6 +22,14 @@ public class StartData {
 
     private String strFinishText;
     private String strFinishTextUnits;
+
+    public String getStrTextStartSharp() {
+        return strTextStartSharp;
+    }
+
+    public void setStrTextStartSharp(String strTextStartSharp) {
+        this.strTextStartSharp = strTextStartSharp;
+    }
 
     public String getStrFinishTextUnits() {
         return strFinishTextUnits;

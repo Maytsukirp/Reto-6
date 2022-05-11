@@ -29,7 +29,9 @@ public class Answer implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         actor.attemptsTo(
                 Click.on(IconNewMeeting.TEXT_SEARCH), Enter.theValue(data.get(0).getStrMeetingName()).into(IconNewMeeting.TEXT_SEARCH));
-
+        try {Thread.sleep(3000);} catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         String text_finish_meeting = Text.of(IconNewMeeting.TEXT_TABLE).viewedBy(actor).asString();
         return data.get(0).getStrMeetingName().equals(text_finish_meeting);
     }
