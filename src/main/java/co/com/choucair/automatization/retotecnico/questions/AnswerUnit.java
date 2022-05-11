@@ -11,16 +11,16 @@ import net.serenitybdd.screenplay.questions.Text;
 import java.util.List;
 
 
-public class Answer2 implements Question<Boolean> {
+public class AnswerUnit implements Question<Boolean> {
     String message;
 
-    public Answer2(String message) {
+    public AnswerUnit(String message) {
         this.message = message;
     }
 
-    public static Answer2 theD(String message) {
+    public static AnswerUnit theD(String message) {
 
-        return new Answer2 (message);
+        return new AnswerUnit (message);
     }
 
     @Override

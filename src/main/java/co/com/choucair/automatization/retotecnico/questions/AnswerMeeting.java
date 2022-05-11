@@ -11,18 +11,18 @@ import net.serenitybdd.screenplay.questions.Text;
 
 import java.util.List;
 
-public class Answer implements Question<Boolean> {
+public class AnswerMeeting implements Question<Boolean> {
 
     private List<StartData> data;
 
-    public Answer(List<StartData> data) {
+    public AnswerMeeting(List<StartData> data) {
 
         this.data = data;
     }
 
-    public static Answer theD(List<StartData> data) {
+    public static AnswerMeeting theD(List<StartData> data) {
 
-        return new Answer(data);
+        return new AnswerMeeting(data);
     }
 
     @Override
