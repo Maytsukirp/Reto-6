@@ -70,4 +70,14 @@ public class IconNewMeeting {
 
     public static final Target TEXT_MEETINGS = Target.the("Text Meeting")
             .located(By.xpath("/html/body/main/section/div/div[1]/div"));
+
+    public static final Target TEXT_SEARCH = Target.the("Text Search")
+            .located(By.xpath("/html/body/main/section/div/div[2]/div[1]/input"));
+
+    public static final Target TEXT_TABLE = Target.the("Text Table")
+            .located(By.xpath("/html/body/main/section/div/div[3]/div[4]/div[3]/div/div[1]/div[2]"));
+
+
+
+
 }

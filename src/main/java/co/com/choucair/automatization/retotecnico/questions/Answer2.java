@@ -2,12 +2,14 @@ package co.com.choucair.automatization.retotecnico.questions;
 
 import co.com.choucair.automatization.retotecnico.model.StartData;
 import co.com.choucair.automatization.retotecnico.userinterface.IconNewBusinessUnit;
-import co.com.choucair.automatization.retotecnico.userinterface.IconNewMeeting;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.questions.Text;
 
 import java.util.List;
+
 
 public class Answer2 implements Question<Boolean> {
     String message;

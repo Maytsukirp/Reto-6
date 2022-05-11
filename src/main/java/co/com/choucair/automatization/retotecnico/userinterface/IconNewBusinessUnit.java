@@ -25,4 +25,11 @@ public class IconNewBusinessUnit {
 
     public static final Target TEXT_BUSINESS_UNIT = Target.the("Text business unit")
             .located(By.xpath("/html/body/main/section/div/div[1]/div"));
+
+    public static final Target TEXT_SEARCH_BUSINESS  = Target.the("Text Search")
+            .located(By.xpath("/html/body/main/section/div/div[2]/div[1]/input"));
+
+    public static final Target TEXT_TABLE_BUSINESS = Target.the("Text Table")
+            .located(By.xpath("/html/body/main/section/div/div[3]/div[4]/div[3]/div/div[1]/div[2]"));
 }
+
