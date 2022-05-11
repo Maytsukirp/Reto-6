@@ -62,7 +62,7 @@ public class StartStepDefinition {
 
     @Then("^registration is successfully completed$")
     public void registrationIsSuccessfullyCompleted(List<StartData> data) {
-        theActorInTheSpotlight().should(seeThat(AnswerUnit.theD(data.get(0).getStrFinishTextUnits())));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerUnit.theD(data)));
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -23,8 +23,8 @@
         | strNameUser | strPassword | strNameNewBusinessUnit | strParentUnit  |
         | admin       | serenity    | Unidad                 | Administration |
       Then  registration is successfully completed
-        | strFinishTextUnits |
-        | Business Units     |
+        | strNameNewBusinessUnit |
+        | Unidad                 |
 
     @RegistrateMeeting
     Scenario: Mays registration a meeting on a unit
