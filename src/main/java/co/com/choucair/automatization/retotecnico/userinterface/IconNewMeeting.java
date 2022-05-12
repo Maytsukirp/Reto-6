@@ -1,83 +1,76 @@
 package co.com.choucair.automatization.retotecnico.userinterface;
-
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 public class IconNewMeeting {
 
     public static final Target NEW_MEETING = Target.the("New Meeting ")
-            .located(By.xpath("/html/body/main/section/div/div[2]/div[2]/div/div/div[1]"));
+            .locatedBy(".add-button .button-inner");
 
     public static final Target TEXT_MEETINGNAME= Target.the("Meeting name")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[1]/input"));
+            .locatedBy("[name='MeetingName']");
 
     public static final Target CONTAINER_MEETINGTYPE = Target.the("Container Meeting type")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[2]/div[1]/a"));
+            .locatedBy(".required.select2-container .select2-chosen");
 
     public static final Target MEETINGTYPE = Target.the("Meeting type")
-            .located(By.xpath("/html/body/div[6]/div/input"));
+            .locatedBy("[aria-owns='select2-results-6']");
 
     public static final Target MEETINGNUMBER = Target.the("Meeting Number")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[3]/input"));
+            .locatedBy("[name='MeetingNumber']");
 
     public static final Target STARTDATE = Target.the("Start date")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[4]/input"));
+            .locatedBy("[name='StartDate']");
 
     public static final Target STARTDATE_HOUR = Target.the("Start Date Hour")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[4]/select"));
+            .locatedBy(".StartDate > .time");
 
     public static final Target ENDDATE = Target.the("End date")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[5]/input"));
+            .locatedBy("[name='EndDate']");
 
     public static final Target ENDDATE_HOUR = Target.the("End Date Hour")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[5]/select"));
+            .locatedBy(".EndDate > .time");
 
     public static final Target CONTAINER_LOCATION = Target.the("Container location")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[6]/div[1]/a/span[1]"));
+            .locatedBy(".LocationId .select2-chosen");
 
     public static final Target LOCATION = Target.the("Location")
-            .located(By.xpath("/html/body/div[7]/div/input"));
+            .locatedBy("[aria-owns='select2-results-7']");
 
     public static final Target CONTAINER_UNIT = Target.the("Container unit")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[7]/div[1]/a/span[1]"));
+            .locatedBy(".UnitId .select2-chosen");
 
     public static final Target UNIT = Target.the("Unit")
-            .located(By.xpath("/html/body/div[8]/div/input"));
+            .locatedBy("[aria-owns='select2-results-8']");
 
     public static final Target CONTAINER_ORGANIZED = Target.the("Container Organized By")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[8]/div[1]/a"));
+            .locatedBy(".OrganizerContactId .select2-chosen");
 
     public static final Target ORGANIZED = Target.the("Organized By")
-            .located(By.xpath("/html/body/div[9]/div/input"));
+            .locatedBy("[aria-owns='select2-results-9']");
 
     public static final Target CONTAINER_REPORTER = Target.the("Container Reporter")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[9]/div[1]/a/span[1]"));
+            .locatedBy(".ReporterContactId .select2-choice");
 
     public static final Target REPORTER = Target.the("Reporter")
-            .located(By.xpath("/html/body/div[10]/div/input"));
+            .locatedBy("[aria-owns='select2-results-10']");
 
     public static final Target CONTAINER_ATTENDEE = Target.the("Container Attendee List")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[10]/div[1]/div[1]/div[2]/a/span[1]"));
+            .locatedBy("//span[.='--select contact to add--']");
 
     public static final Target ATTENDEE_LIST = Target.the("Attendee List")
-            .located(By.xpath("/html/body/div[11]/div/input"));
+            .locatedBy("[aria-owns='select2-results-12']");
 
     public static final Target APPLYCHANGE_MEETING = Target.the("Apply Changes")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[1]/div/div/div/div[2]"));
+            .locatedBy(".apply-changes-button");
 
     public static final Target SAVE_MEETING = Target.the("Save meeting")
-            .located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[1]/div/div/div/div[1]"));
-
-    public static final Target TEXT_MEETINGS = Target.the("Text Meeting")
-            .located(By.xpath("/html/body/main/section/div/div[1]/div"));
+            .locatedBy(".save-and-close-button .button-inner");
 
     public static final Target TEXT_SEARCH = Target.the("Text Search")
-            .located(By.xpath("/html/body/main/section/div/div[2]/div[1]/input"));
+            .locatedBy(".s-Serenity-QuickSearchInput");
 
     public static final Target TEXT_TABLE = Target.the("Text Table")
-            .located(By.xpath("/html/body/main/section/div/div[3]/div[4]/div[3]/div/div[1]/div[2]"));
-
-
-
+            .locatedBy(".grid-canvas-left.grid-canvas-top > div:nth-of-type(1) > .l1");
 
 }

@@ -15,6 +15,7 @@
         | StrTextStartSharp |
         | StartSharp        |
 
+
     @RegistrateUnits
     Scenario: Mays registration on start website
 

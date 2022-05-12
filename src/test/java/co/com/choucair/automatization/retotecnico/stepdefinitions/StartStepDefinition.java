@@ -12,7 +12,6 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import javax.xml.crypto.Data;
 import java.util.List;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
