@@ -1,7 +1,5 @@
 package co.com.choucair.automatization.retotecnico.questions;
-
 import co.com.choucair.automatization.retotecnico.model.StartData;
-
 import co.com.choucair.automatization.retotecnico.userinterface.FillNewMeetingPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;

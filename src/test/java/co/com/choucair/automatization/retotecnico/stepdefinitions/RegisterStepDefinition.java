@@ -1,7 +1,7 @@
 package co.com.choucair.automatization.retotecnico.stepdefinitions;
 import co.com.choucair.automatization.retotecnico.model.StartData;
 import co.com.choucair.automatization.retotecnico.questions.AnswerMeeting;
-import co.com.choucair.automatization.retotecnico.questions.AnswerUnit;
+import co.com.choucair.automatization.retotecnico.questions.AnswerBusinessUnit;
 import co.com.choucair.automatization.retotecnico.questions.AnswerLogin;
 import co.com.choucair.automatization.retotecnico.tasks.*;
 import cucumber.api.java.Before;
@@ -61,7 +61,7 @@ public class RegisterStepDefinition {
 
     @Then("^registration is successfully completed$")
     public void registrationIsSuccessfullyCompleted(List<StartData> data) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerUnit.theD(data)));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerBusinessUnit.theD(data)));
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////

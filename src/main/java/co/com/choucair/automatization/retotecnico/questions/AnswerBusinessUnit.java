@@ -11,17 +11,17 @@ import net.serenitybdd.screenplay.questions.Text;
 import java.util.List;
 
 
-public class AnswerUnit implements Question<Boolean> {
+public class AnswerBusinessUnit implements Question<Boolean> {
     private List<StartData> data;
 
-    public AnswerUnit(List<StartData> data) {
+    public AnswerBusinessUnit(List<StartData> data) {
 
         this.data = data;
     }
 
-    public static AnswerUnit theD(List<StartData> data) {
+    public static AnswerBusinessUnit theD(List<StartData> data) {
 
-        return new AnswerUnit(data);
+        return new AnswerBusinessUnit(data);
     }
 
     @Override
