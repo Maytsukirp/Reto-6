@@ -1,9 +1,7 @@
 package co.com.choucair.automatization.retotecnico.tasks;
 
-import co.com.choucair.automatization.retotecnico.userinterface.MeetingIcon;
-import co.com.choucair.automatization.retotecnico.userinterface.OrganizationIcon;
+import co.com.choucair.automatization.retotecnico.userinterface.SelectMeetingPage;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -18,8 +16,8 @@ public class SelectMeeting implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(MeetingIcon.ICON_MEETING),
-                Click.on(MeetingIcon.MEETINGS)
+                Click.on(SelectMeetingPage.ICON_MEETING),
+                Click.on(SelectMeetingPage.MEETINGS)
         );
     }
 }

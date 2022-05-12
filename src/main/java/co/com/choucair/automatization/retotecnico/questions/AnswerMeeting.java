@@ -2,7 +2,7 @@ package co.com.choucair.automatization.retotecnico.questions;
 
 import co.com.choucair.automatization.retotecnico.model.StartData;
 
-import co.com.choucair.automatization.retotecnico.userinterface.IconNewMeeting;
+import co.com.choucair.automatization.retotecnico.userinterface.FillNewMeetingPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actions.Click;
@@ -28,11 +28,11 @@ public class AnswerMeeting implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         actor.attemptsTo(
-                Click.on(IconNewMeeting.TEXT_SEARCH), Enter.theValue(data.get(0).getStrMeetingName()).into(IconNewMeeting.TEXT_SEARCH));
+                Click.on(FillNewMeetingPage.TEXT_SEARCH), Enter.theValue(data.get(0).getStrMeetingName()).into(FillNewMeetingPage.TEXT_SEARCH));
         try {Thread.sleep(3000);} catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String text_finish_meeting = Text.of(IconNewMeeting.TEXT_TABLE).viewedBy(actor).asString();
+        String text_finish_meeting = Text.of(FillNewMeetingPage.TEXT_TABLE).viewedBy(actor).asString();
         return data.get(0).getStrMeetingName().equals(text_finish_meeting);
     }
 }

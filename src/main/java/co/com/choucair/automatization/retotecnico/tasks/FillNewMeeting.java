@@ -1,9 +1,8 @@
 package co.com.choucair.automatization.retotecnico.tasks;
 
 import co.com.choucair.automatization.retotecnico.model.StartData;
-import co.com.choucair.automatization.retotecnico.userinterface.IconNewMeeting;
+import co.com.choucair.automatization.retotecnico.userinterface.FillNewMeetingPage;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -27,32 +26,32 @@ public class FillNewMeeting implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(IconNewMeeting.NEW_MEETING),
-                Enter.theValue(data.get(0).getStrMeetingName()).into(IconNewMeeting.TEXT_MEETINGNAME),
-                Click.on(IconNewMeeting.CONTAINER_MEETINGTYPE),
-                Enter.theValue(data.get(0).getStrMeetingType()).into(IconNewMeeting.MEETINGTYPE).thenHit(Keys.ENTER),
-                Enter.theValue(data.get(0).getStrMeetingNumber()).into(IconNewMeeting.MEETINGNUMBER),
-                Enter.theValue(data.get(0).getStrStarDate()).into(IconNewMeeting.STARTDATE),
+                Click.on(FillNewMeetingPage.NEW_MEETING),
+                Enter.theValue(data.get(0).getStrMeetingName()).into(FillNewMeetingPage.MEETING_NAME),
+                Click.on(FillNewMeetingPage.CONTAINER_MEETING_TYPE),
+                Enter.theValue(data.get(0).getStrMeetingType()).into(FillNewMeetingPage.MEETING_TYPE).thenHit(Keys.ENTER),
+                Enter.theValue(data.get(0).getStrMeetingNumber()).into(FillNewMeetingPage.MEETING_NUMBER),
+                Enter.theValue(data.get(0).getStrStarDate()).into(FillNewMeetingPage.START_DATE),
 
-                SelectFromOptions.byVisibleText(data.get(0).getStrStarDateHour()).from((IconNewMeeting.STARTDATE_HOUR)),
+                SelectFromOptions.byVisibleText(data.get(0).getStrStarDateHour()).from((FillNewMeetingPage.START_DATE_HOUR)),
 
-                Enter.theValue(data.get(0).getStrEndDate()).into(IconNewMeeting.ENDDATE),
+                Enter.theValue(data.get(0).getStrEndDate()).into(FillNewMeetingPage.END_DATE),
 
-                SelectFromOptions.byVisibleText(data.get(0).getStrEndDateHour()).from(IconNewMeeting.ENDDATE_HOUR),
+                SelectFromOptions.byVisibleText(data.get(0).getStrEndDateHour()).from(FillNewMeetingPage.END_DATE_HOUR),
 
-                Click.on(IconNewMeeting.CONTAINER_LOCATION),
-                Enter.theValue(data.get(0).getStrLocation()).into(IconNewMeeting.LOCATION).thenHit(Keys.ENTER),
-                Click.on(IconNewMeeting.CONTAINER_UNIT),
-                Enter.theValue(data.get(0).getStrUnit()).into(IconNewMeeting.UNIT).thenHit(Keys.ENTER),
-                Click.on(IconNewMeeting.CONTAINER_ORGANIZED),
-                Enter.theValue(data.get(0).getStrOrganized()).into(IconNewMeeting.ORGANIZED).thenHit(Keys.ENTER),
-                Click.on(IconNewMeeting.CONTAINER_REPORTER),
-                Enter.theValue(data.get(0).getStrReporter()).into(IconNewMeeting.REPORTER).thenHit(Keys.ENTER),
-                Click.on(IconNewMeeting.CONTAINER_ATTENDEE),
-                Enter.theValue(data.get(0).getStrAttendee()).into(IconNewMeeting.ATTENDEE_LIST).thenHit(Keys.ENTER),
+                Click.on(FillNewMeetingPage.CONTAINER_LOCATION),
+                Enter.theValue(data.get(0).getStrLocation()).into(FillNewMeetingPage.LOCATION).thenHit(Keys.ENTER),
+                Click.on(FillNewMeetingPage.CONTAINER_UNIT),
+                Enter.theValue(data.get(0).getStrUnit()).into(FillNewMeetingPage.UNIT).thenHit(Keys.ENTER),
+                Click.on(FillNewMeetingPage.CONTAINER_ORGANIZED),
+                Enter.theValue(data.get(0).getStrOrganized()).into(FillNewMeetingPage.ORGANIZED).thenHit(Keys.ENTER),
+                Click.on(FillNewMeetingPage.CONTAINER_REPORTER),
+                Enter.theValue(data.get(0).getStrReporter()).into(FillNewMeetingPage.REPORTER).thenHit(Keys.ENTER),
+                Click.on(FillNewMeetingPage.CONTAINER_ATTENDEE),
+                Enter.theValue(data.get(0).getStrAttendee()).into(FillNewMeetingPage.ATTENDEE_LIST).thenHit(Keys.ENTER),
 
-                Click.on(IconNewMeeting.APPLYCHANGE_MEETING),
-                Click.on(IconNewMeeting.SAVE_MEETING)
+                Click.on(FillNewMeetingPage.APPLY_CHANGE_MEETING),
+                Click.on(FillNewMeetingPage.SAVE_MEETING)
         );
     }
 }

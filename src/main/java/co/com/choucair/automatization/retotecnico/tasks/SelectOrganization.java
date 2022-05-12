@@ -1,6 +1,6 @@
 package co.com.choucair.automatization.retotecnico.tasks;
 
-import co.com.choucair.automatization.retotecnico.userinterface.OrganizationIcon;
+import co.com.choucair.automatization.retotecnico.userinterface.SelectOrganizationPage;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -16,8 +16,8 @@ public class SelectOrganization implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(OrganizationIcon.ICON_ORGANIZATION),
-                Click.on(OrganizationIcon.BUSINESS_UNIT)
+                Click.on(SelectOrganizationPage.ICON_ORGANIZATION),
+                Click.on(SelectOrganizationPage.BUSINESS_UNIT)
         );
     }
 }

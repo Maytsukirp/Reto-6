@@ -17,7 +17,7 @@ import java.util.List;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-public class StartStepDefinition {
+public class RegisterStepDefinition {
 
     @Before
     public void setState(){

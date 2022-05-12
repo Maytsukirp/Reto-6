@@ -1,18 +1,14 @@
 package co.com.choucair.automatization.retotecnico.tasks;
 
-import co.com.choucair.automatization.retotecnico.model.StartData;
-import co.com.choucair.automatization.retotecnico.userinterface.PageStart;
+import co.com.choucair.automatization.retotecnico.userinterface.OpenStartPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 
-import java.util.List;
-
 public class OpenStart implements Task {
-    private PageStart pageStart;
+    private OpenStartPage openStartPage;
     //private List<StartData> data;
 
 
@@ -24,7 +20,7 @@ public class OpenStart implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Open.browserOn(pageStart),
-                Click.on(PageStart.BOTTON_JOIN));
+        actor.attemptsTo(Open.browserOn(openStartPage),
+                Click.on(OpenStartPage.BOTTON_JOIN));
     }
 }

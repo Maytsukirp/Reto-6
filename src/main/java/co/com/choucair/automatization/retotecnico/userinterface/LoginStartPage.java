@@ -3,7 +3,7 @@ package co.com.choucair.automatization.retotecnico.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class LoginInterface {
+public class LoginStartPage {
 
     public static final Target USERNAME = Target.the("Username")
             .locatedBy("[name='Username']");

@@ -1,16 +1,12 @@
 package co.com.choucair.automatization.retotecnico.tasks;
 
 import co.com.choucair.automatization.retotecnico.model.StartData;
-import co.com.choucair.automatization.retotecnico.userinterface.IconNewMeeting;
-import co.com.choucair.automatization.retotecnico.userinterface.LoginInterface;
-import co.com.choucair.automatization.retotecnico.userinterface.PageStart;
+import co.com.choucair.automatization.retotecnico.userinterface.LoginStartPage;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Open;
 
 import java.util.List;
 
@@ -29,11 +25,11 @@ public class LoginStart implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(LoginInterface.USERNAME),
-                Enter.theValue(data.get(0).getStrNameUser()).into(LoginInterface.USERNAME),
-                Click.on(LoginInterface.PASSWORD),
-                Enter.theValue(data.get(0).getStrPassword()).into(LoginInterface.PASSWORD),
-                Click.on(LoginInterface.SIGN_IN_BOTTON));
+                Click.on(LoginStartPage.USERNAME),
+                Enter.theValue(data.get(0).getStrNameUser()).into(LoginStartPage.USERNAME),
+                Click.on(LoginStartPage.PASSWORD),
+                Enter.theValue(data.get(0).getStrPassword()).into(LoginStartPage.PASSWORD),
+                Click.on(LoginStartPage.SIGN_IN_BOTTON));
 
     }
 }

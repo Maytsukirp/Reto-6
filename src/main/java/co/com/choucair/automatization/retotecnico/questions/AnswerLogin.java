@@ -1,20 +1,13 @@
 package co.com.choucair.automatization.retotecnico.questions;
 
-import co.com.choucair.automatization.retotecnico.model.StartData;
-import co.com.choucair.automatization.retotecnico.userinterface.IconNewMeeting;
-import co.com.choucair.automatization.retotecnico.userinterface.LoginInterface;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.questions.Text;
-
-import java.util.List;
 
 public class AnswerLogin implements Question<Boolean> {
     String message_login;
 
     public AnswerLogin(String message) {
+
         this.message_login = message;
     }
 

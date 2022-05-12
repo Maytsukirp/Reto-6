@@ -1,34 +1,34 @@
 package co.com.choucair.automatization.retotecnico.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
-import org.openqa.selenium.By;
 
-public class IconNewMeeting {
+
+public class FillNewMeetingPage {
 
     public static final Target NEW_MEETING = Target.the("New Meeting ")
             .locatedBy(".add-button .button-inner");
 
-    public static final Target TEXT_MEETINGNAME= Target.the("Meeting name")
+    public static final Target MEETING_NAME = Target.the("Meeting name")
             .locatedBy("[name='MeetingName']");
 
-    public static final Target CONTAINER_MEETINGTYPE = Target.the("Container Meeting type")
+    public static final Target CONTAINER_MEETING_TYPE = Target.the("Container Meeting type")
             .locatedBy(".required.select2-container .select2-chosen");
 
-    public static final Target MEETINGTYPE = Target.the("Meeting type")
+    public static final Target MEETING_TYPE = Target.the("Meeting type")
             .locatedBy("[aria-owns='select2-results-6']");
 
-    public static final Target MEETINGNUMBER = Target.the("Meeting Number")
+    public static final Target MEETING_NUMBER = Target.the("Meeting Number")
             .locatedBy("[name='MeetingNumber']");
 
-    public static final Target STARTDATE = Target.the("Start date")
+    public static final Target START_DATE = Target.the("Start date")
             .locatedBy("[name='StartDate']");
 
-    public static final Target STARTDATE_HOUR = Target.the("Start Date Hour")
+    public static final Target START_DATE_HOUR = Target.the("Start Date Hour")
             .locatedBy(".StartDate > .time");
 
-    public static final Target ENDDATE = Target.the("End date")
+    public static final Target END_DATE = Target.the("End date")
             .locatedBy("[name='EndDate']");
 
-    public static final Target ENDDATE_HOUR = Target.the("End Date Hour")
+    public static final Target END_DATE_HOUR = Target.the("End Date Hour")
             .locatedBy(".EndDate > .time");
 
     public static final Target CONTAINER_LOCATION = Target.the("Container location")
@@ -61,7 +61,7 @@ public class IconNewMeeting {
     public static final Target ATTENDEE_LIST = Target.the("Attendee List")
             .locatedBy("[aria-owns='select2-results-12']");
 
-    public static final Target APPLYCHANGE_MEETING = Target.the("Apply Changes")
+    public static final Target APPLY_CHANGE_MEETING = Target.the("Apply Changes")
             .locatedBy(".apply-changes-button");
 
     public static final Target SAVE_MEETING = Target.the("Save meeting")

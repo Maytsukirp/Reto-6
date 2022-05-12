@@ -1,7 +1,7 @@
 package co.com.choucair.automatization.retotecnico.questions;
 
 import co.com.choucair.automatization.retotecnico.model.StartData;
-import co.com.choucair.automatization.retotecnico.userinterface.IconNewBusinessUnit;
+import co.com.choucair.automatization.retotecnico.userinterface.FillNewBusinessUnitPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actions.Click;
@@ -27,11 +27,11 @@ public class AnswerUnit implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         actor.attemptsTo(
-                Click.on(IconNewBusinessUnit.TEXT_SEARCH_BUSINESS), Enter.theValue(data.get(0).getStrNameNewBusinessUnit()).into(IconNewBusinessUnit.TEXT_SEARCH_BUSINESS));
+                Click.on(FillNewBusinessUnitPage.TEXT_SEARCH_BUSINESS), Enter.theValue(data.get(0).getStrNameNewBusinessUnit()).into(FillNewBusinessUnitPage.TEXT_SEARCH_BUSINESS));
         try {Thread.sleep(3000);} catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String text_business_unit = Text.of(IconNewBusinessUnit.TEXT_TABLE_BUSINESS).viewedBy(actor).asString();
+        String text_business_unit = Text.of(FillNewBusinessUnitPage.TEXT_TABLE_BUSINESS).viewedBy(actor).asString();
         return data.get(0).getStrNameNewBusinessUnit().equals(text_business_unit);
     }
 }
