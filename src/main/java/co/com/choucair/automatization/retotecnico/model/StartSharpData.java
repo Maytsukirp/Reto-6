@@ -1,6 +1,6 @@
 package co.com.choucair.automatization.retotecnico.model;
 
-public class StartData {
+public class StartSharpData {
     private String strNameUser;
     private String strPassword;
     private String strTextStartSharp;

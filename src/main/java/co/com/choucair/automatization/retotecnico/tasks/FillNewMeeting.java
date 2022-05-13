@@ -1,6 +1,6 @@
 package co.com.choucair.automatization.retotecnico.tasks;
 
-import co.com.choucair.automatization.retotecnico.model.StartData;
+import co.com.choucair.automatization.retotecnico.model.StartSharpData;
 import co.com.choucair.automatization.retotecnico.userinterface.FillNewMeetingPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -13,13 +13,13 @@ import org.openqa.selenium.Keys;
 import java.util.List;
 
 public class FillNewMeeting implements Task {
-    private List<StartData> data;
+    private List<StartSharpData> data;
 
-    public FillNewMeeting(List<StartData> data) {
+    public FillNewMeeting(List<StartSharpData> data) {
         this.data = data;
     }
 
-    public static FillNewMeeting thePage(List<StartData> data) {
+    public static FillNewMeeting thePage(List<StartSharpData> data) {
         return Tasks.instrumented(FillNewMeeting.class, data);
     }
 

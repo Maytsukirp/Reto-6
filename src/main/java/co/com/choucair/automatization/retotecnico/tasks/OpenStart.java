@@ -9,7 +9,7 @@ import net.serenitybdd.screenplay.actions.Open;
 
 public class OpenStart implements Task {
     private OpenStartPage openStartPage;
-    //private List<StartData> data;
+    //private List<StartSharpData> data;
 
 
     public static OpenStart thePage() {

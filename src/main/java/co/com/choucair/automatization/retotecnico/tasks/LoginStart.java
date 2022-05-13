@@ -1,6 +1,6 @@
 package co.com.choucair.automatization.retotecnico.tasks;
 
-import co.com.choucair.automatization.retotecnico.model.StartData;
+import co.com.choucair.automatization.retotecnico.model.StartSharpData;
 import co.com.choucair.automatization.retotecnico.userinterface.LoginStartPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -12,13 +12,13 @@ import java.util.List;
 
 public class LoginStart implements Task {
 
-    private List<StartData> data;
+    private List<StartSharpData> data;
 
-    public LoginStart(List<StartData> data) {
+    public LoginStart(List<StartSharpData> data) {
         this.data = data;
     }
 
-    public static LoginStart thePage(List<StartData> data) {
+    public static LoginStart thePage(List<StartSharpData> data) {
         return Tasks.instrumented(LoginStart.class, data);
     }
 

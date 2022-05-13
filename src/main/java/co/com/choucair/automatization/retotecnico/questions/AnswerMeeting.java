@@ -1,5 +1,5 @@
 package co.com.choucair.automatization.retotecnico.questions;
-import co.com.choucair.automatization.retotecnico.model.StartData;
+import co.com.choucair.automatization.retotecnico.model.StartSharpData;
 import co.com.choucair.automatization.retotecnico.userinterface.FillNewMeetingPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -11,14 +11,14 @@ import java.util.List;
 
 public class AnswerMeeting implements Question<Boolean> {
 
-    private List<StartData> data;
+    private List<StartSharpData> data;
 
-    public AnswerMeeting(List<StartData> data) {
+    public AnswerMeeting(List<StartSharpData> data) {
 
         this.data = data;
     }
 
-    public static AnswerMeeting theD(List<StartData> data) {
+    public static AnswerMeeting theD(List<StartSharpData> data) {
 
         return new AnswerMeeting(data);
     }
