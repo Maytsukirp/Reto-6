@@ -25,7 +25,6 @@ public class BusinessUnitStepDefinition {
     @Given("^May has joined StartSharp$")
     public void mayHasJoinedStartSharp() {
         OnStage.theActorCalled("May").wasAbleTo(AcessTheStartSharp.page());
-
     }
 
     @When("^enter all requested information on business unit$")

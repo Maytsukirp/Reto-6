@@ -3,6 +3,7 @@ import co.com.choucair.automatization.retotecnico.model.StartSharpData;
 import co.com.choucair.automatization.retotecnico.questions.AnswerInMeeting;
 import co.com.choucair.automatization.retotecnico.tasks.*;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
@@ -29,5 +30,4 @@ public class MeetingStepDefinition {
     public void registrationIsCompleted(List<StartSharpData> data) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerInMeeting.forTheCreatedMeeting(data)));
     }
-
 }
