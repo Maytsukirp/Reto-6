@@ -1,9 +1,9 @@
 package co.com.choucair.automatization.retotecnico.stepdefinitions;
 import co.com.choucair.automatization.retotecnico.model.StartSharpData;
-import co.com.choucair.automatization.retotecnico.questions.AnswerBusinessUnit;
-import co.com.choucair.automatization.retotecnico.tasks.FillNewBussinessUnit;
-import co.com.choucair.automatization.retotecnico.tasks.OpenStart;
-import co.com.choucair.automatization.retotecnico.tasks.SelectOrganization;
+import co.com.choucair.automatization.retotecnico.questions.AnswerInBusinessUnit;
+import co.com.choucair.automatization.retotecnico.tasks.FillBusinessUnitData;
+import co.com.choucair.automatization.retotecnico.tasks.AcessTheStartSharp;
+import co.com.choucair.automatization.retotecnico.tasks.SelectTheOrganization;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -24,19 +24,18 @@ public class BusinessUnitStepDefinition {
 
     @Given("^May has joined StartSharp$")
     public void mayHasJoinedStartSharp() {
-        OnStage.theActorCalled("May").wasAbleTo(OpenStart.thePage());
+        OnStage.theActorCalled("May").wasAbleTo(AcessTheStartSharp.page());
 
     }
 
-
     @When("^enter all requested information on business unit$")
     public void enterAllRequestedInformationOnBusinessUnit(List<StartSharpData> data) {
-        OnStage.theActorInTheSpotlight().attemptsTo(SelectOrganization.thePage(),
-                FillNewBussinessUnit.thePage(data) );
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectTheOrganization.onThePage(),
+                FillBusinessUnitData.inTheBusinessUnit(data) );
     }
 
     @Then("^registration is successfully completed$")
     public void registrationIsSuccessfullyCompleted(List<StartSharpData> data) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerBusinessUnit.theD(data)));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerInBusinessUnit.forTheCreatedBusinessUnit(data)));
     }
 }

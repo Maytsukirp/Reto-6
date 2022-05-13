@@ -1,9 +1,8 @@
 package co.com.choucair.automatization.retotecnico.stepdefinitions;
 import co.com.choucair.automatization.retotecnico.model.StartSharpData;
-import co.com.choucair.automatization.retotecnico.questions.AnswerMeeting;
+import co.com.choucair.automatization.retotecnico.questions.AnswerInMeeting;
 import co.com.choucair.automatization.retotecnico.tasks.*;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
@@ -22,12 +21,13 @@ public class MeetingStepDefinition {
 
     @When("^enter all requested information in the meeting$")
     public void enterAllRequestedInformationInTheMeeting(List<StartSharpData> data) {
-        OnStage.theActorInTheSpotlight().attemptsTo(SelectMeeting.thePage(), FillNewMeeting.thePage(data));
+        OnStage.theActorInTheSpotlight().attemptsTo(SelectTheMeeting.onThePage(),
+                FillMeetingData.inTheMeeting(data));
     }
 
     @Then("^registration is completed$")
     public void registrationIsCompleted(List<StartSharpData> data) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerMeeting.theD(data)));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerInMeeting.forTheCreatedMeeting(data)));
     }
-    
+
 }

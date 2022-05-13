@@ -3,7 +3,7 @@ package co.com.choucair.automatization.retotecnico.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class FillNewBusinessUnitPage {
+public class FillBusinessUnitDataPage {
 
     public static final Target ICON_NEW_BUSSINESS_UNIT = Target.the("Icon new bussiness unit")
             .locatedBy(".add-button");

@@ -2,7 +2,7 @@ package co.com.choucair.automatization.retotecnico.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 
 
-public class FillNewMeetingPage {
+public class FillMeetingDataPage {
 
     public static final Target NEW_MEETING = Target.the("New Meeting ")
             .locatedBy(".add-button .button-inner");

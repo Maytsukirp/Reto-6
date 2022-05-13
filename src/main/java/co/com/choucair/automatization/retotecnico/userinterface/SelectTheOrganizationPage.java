@@ -3,7 +3,7 @@ package co.com.choucair.automatization.retotecnico.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 
 
-public class SelectOrganizationPage {
+public class SelectTheOrganizationPage {
 
     public static final Target ICON_ORGANIZATION= Target.the("Icon organization")
             .locatedBy("//span[.='Organization']");

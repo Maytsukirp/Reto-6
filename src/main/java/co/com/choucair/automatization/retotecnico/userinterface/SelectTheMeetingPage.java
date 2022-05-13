@@ -3,7 +3,7 @@ package co.com.choucair.automatization.retotecnico.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class SelectMeetingPage {
+public class SelectTheMeetingPage {
 
     public static final Target ICON_MEETING= Target.the("Icon Meeting")
             .locatedBy("//span[.='Meeting']");

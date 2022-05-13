@@ -4,19 +4,22 @@ import co.com.choucair.automatization.retotecnico.userinterface.AcessTheStartPag
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Open;
 
-public class OpenPageStar implements Task {
+public class AcessTheStartSharp implements Task {
     private AcessTheStartPage acessTheStartPage;
 
-    public static OpenPageStar thePage() {
 
-        return Tasks.instrumented(OpenPageStar.class);
+    public static AcessTheStartSharp page() {
+
+        return Tasks.instrumented(AcessTheStartSharp.class);
     }
+
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-        actor.attemptsTo(Open.browserOn(acessTheStartPage));
+        actor.attemptsTo(Open.browserOn(acessTheStartPage),
+                Click.on(AcessTheStartPage.BOTTON_JOIN));
     }
 }

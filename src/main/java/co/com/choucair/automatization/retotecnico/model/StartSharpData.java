@@ -136,8 +136,6 @@ public class StartSharpData {
         this.strAttendee = strAttendee;
     }
 
-
-
     public String getStrFinishText() {
         return strFinishText;
     }
@@ -150,9 +148,7 @@ public class StartSharpData {
         return strNameNewBusinessUnit;
     }
 
-    public void setStrNameNewBusinessUnit(String strNameNewBusinessUnit) {
-        this.strNameNewBusinessUnit = strNameNewBusinessUnit;
-    }
+    public void setStrNameNewBusinessUnit(String strNameNewBusinessUnit) {this.strNameNewBusinessUnit = strNameNewBusinessUnit; }
 
     public String getStrParentUnit() {
         return strParentUnit;
@@ -161,8 +157,6 @@ public class StartSharpData {
     public void setStrParentUnit(String strParentUnit) {
         this.strParentUnit = strParentUnit;
     }
-
-
 
     public String getStrNameUser() {
         return strNameUser;
@@ -179,6 +173,5 @@ public class StartSharpData {
     public void setStrPassword(String strPassword) {
         this.strPassword = strPassword;
     }
-
 
 }

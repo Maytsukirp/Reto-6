@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 
 @DefaultUrl("https://serenity.is/demo/")
 
-public class OpenStartPage extends PageObject {
+public class AcessTheStartPage extends PageObject {
 
     public static final Target BOTTON_JOIN = Target.the("Botton sign in")
             .locatedBy(".btn");
