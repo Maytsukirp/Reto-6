@@ -3,17 +3,17 @@ package co.com.choucair.automatization.retotecnico.questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class AnswerLogin implements Question<Boolean> {
+public class AnswerInLogin implements Question<Boolean> {
     String message_login;
 
-    public AnswerLogin(String message) {
+    public AnswerInLogin(String message) {
 
         this.message_login = message;
     }
 
-    public static AnswerLogin theD(String message) {
+    public static AnswerInLogin withTheWebsiteTitle(String message) {
 
-        return new AnswerLogin (message);
+        return new AnswerInLogin(message);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package co.com.choucair.automatization.retotecnico.stepdefinitions;
 import co.com.choucair.automatization.retotecnico.model.StartSharpData;
-import co.com.choucair.automatization.retotecnico.questions.AnswerLogin;
+import co.com.choucair.automatization.retotecnico.questions.AnswerInLogin;
 import co.com.choucair.automatization.retotecnico.tasks.LoginStart;
 import co.com.choucair.automatization.retotecnico.tasks.OpenPageStar;
 import cucumber.api.java.Before;
@@ -36,7 +36,7 @@ public class LoginStepDefinition {
 
     @Then("^Login is successful$")
     public void loginIsSuccessful(List<StartSharpData> data) {
-        theActorInTheSpotlight().should(seeThat(AnswerLogin.theD(data.get(0).getStrTextStartSharp())));
+        theActorInTheSpotlight().should(seeThat(AnswerInLogin.withTheWebsiteTitle(data.get(0).getStrTextStartSharp())));
 
     }
 }
