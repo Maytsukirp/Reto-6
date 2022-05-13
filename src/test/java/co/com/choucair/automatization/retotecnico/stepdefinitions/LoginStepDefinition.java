@@ -23,8 +23,8 @@ public class LoginStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^May login to the StartSharp$")
-    public void mayLoginToTheStartSharp() {
+    @Given("^May enters to StartSharp$")
+    public void mayEntersToStartSharp() {
         OnStage.theActorCalled("May").wasAbleTo(OpenPageStar.thePage());
     }
 

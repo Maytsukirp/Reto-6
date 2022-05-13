@@ -2,12 +2,12 @@
 
 @stories
 
-Feature: User registration
+Feature: User Login Sesion
 
   @LoginSesion
   Scenario: May want login sesion
 
-    Given May login to the StartSharp
+    Given May enters to StartSharp
     When She has entered the credentials
       | strNameUser | strPassword |
       | admin       | serenity    |

@@ -22,15 +22,15 @@ public class BusinessUnitStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^May wants to register unity on the Start website$")
-    public void mayWantsToRegisterUnityOnTheStartWebsite() {
+    @Given("^May has joined StartSharp$")
+    public void mayHasJoinedStartSharp() {
         OnStage.theActorCalled("May").wasAbleTo(OpenStart.thePage());
 
     }
 
 
-    @When("^enter all requested information$")
-    public void enterAllRequestedInformation(List<StartSharpData> data) {
+    @When("^enter all requested information on business unit$")
+    public void enterAllRequestedInformationOnBusinessUnit(List<StartSharpData> data) {
         OnStage.theActorInTheSpotlight().attemptsTo(SelectOrganization.thePage(),
                 FillNewBussinessUnit.thePage(data) );
     }

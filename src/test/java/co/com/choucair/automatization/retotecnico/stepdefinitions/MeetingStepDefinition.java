@@ -20,13 +20,6 @@ public class MeetingStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("^May wants to register a meeting on a unit$")
-    public void mayWantsToRegisterAMeetingOnAUnit() {
-        OnStage.theActorCalled("May").wasAbleTo(OpenStart.thePage());
-
-    }
-
-
     @When("^enter all requested information in the meeting$")
     public void enterAllRequestedInformationInTheMeeting(List<StartSharpData> data) {
         OnStage.theActorInTheSpotlight().attemptsTo(SelectMeeting.thePage(), FillNewMeeting.thePage(data));
@@ -36,6 +29,5 @@ public class MeetingStepDefinition {
     public void registrationIsCompleted(List<StartSharpData> data) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerMeeting.theD(data)));
     }
-
-
+    
 }
