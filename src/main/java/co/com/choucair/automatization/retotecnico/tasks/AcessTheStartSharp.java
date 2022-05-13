@@ -7,6 +7,8 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Open;
 
+import static co.com.choucair.automatization.retotecnico.userinterface.AcessTheStartPage.*;
+
 public class AcessTheStartSharp implements Task {
     private AcessTheStartPage acessTheStartPage;
 
@@ -20,6 +22,6 @@ public class AcessTheStartSharp implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Open.browserOn(acessTheStartPage),
-                Click.on(AcessTheStartPage.BOTTON_JOIN));
+                Click.on(BOTTON_JOIN));
     }
 }
